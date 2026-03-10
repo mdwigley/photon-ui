@@ -2,7 +2,7 @@
 
 namespace PhotonUI.Events.Framework
 {
-    public class KeyboardCaptured(Window window, Control captured)
+    public class PointerCaptured(Window window, Control captured)
         : FrameworkEventArgs
     {
         public Window Window = window;

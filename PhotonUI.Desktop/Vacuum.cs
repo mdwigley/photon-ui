@@ -2,7 +2,7 @@
 using PhotonUI.Controls;
 using SDL3;
 
-namespace PhotonUI.Demo
+namespace PhotonUI.Desktop
 {
     public class Vacuum
     {
@@ -38,13 +38,6 @@ namespace PhotonUI.Demo
                                 {
                                     case SDL.Keycode.PrintScreen:
                                         window.GetScreenshot(Path.Combine(AppContext.BaseDirectory, "screenshot.png"));
-                                        break;
-
-                                    case SDL.Keycode.Tab:
-                                        if ((e.Key.Mod & SDL.Keymod.Shift) != 0)
-                                            window.TabStopBackward();
-                                        else
-                                            window.TabStopForward();
                                         break;
                                 }
                                 break;

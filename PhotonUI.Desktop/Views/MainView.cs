@@ -6,16 +6,16 @@ using PhotonUI.Models;
 using PhotonUI.Models.Properties;
 using SDL3;
 
-namespace PhotonUI.Demo.Views
+namespace PhotonUI.Desktop.Views
 {
-    public class MainView(IServiceProvider serviceProvider, IBindingService bindingService, IKeyBindingService keyBindingService, ITextureService textureService)
-        : Border(serviceProvider, bindingService, keyBindingService)
+    public class MainView(IServiceProvider serviceProvider, IBindingService bindingService, ITextureService textureService)
+        : Border(serviceProvider, bindingService)
     {
         protected readonly ITextureService TexureService = textureService;
 
         public override void OnInitialize(Window window)
         {
-            this.TexureService.LoadEmbeddedSurface("PhotonUI.Demo.Assets.Images.sdl_logo.png", "sdl_logo");
+            this.TexureService.LoadEmbeddedSurface("PhotonUI.Desktop.Assets.Images.sdl_logo.png", "sdl_logo");
 
             this.Name = "MainView";
             this.BackgroundColor = new SDL.Color() { A = 255, R = 51, G = 56, B = 63 };
